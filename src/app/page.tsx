@@ -1,95 +1,54 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-
+import styles from "./page.module.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import React from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className={styles.maintop}>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div className={styles.customselectbox}>
+              <select
+                id="basic"
+                className="selectpicker show-tick form-control"
+                data-placeholder="$ USD"
+              >
+                <option>¥ JPY</option>
+                <option>$ USD</option>
+                <option>€ EUR</option>
+              </select>
+            </div>
+            <div className={styles.rightphonebox}>
+              <p>
+                Call US :<a href="#"></a>
+              </p>
+            </div>
+            <div className={styles.ourlink}>
+              <ul>
+                <li>
+                  <a href="">
+                    <i className="fa fa-user s_color"></i>My Account
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i className="fas fa-location-arrow"></i>Track Order
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i className="fas fa-headset"></i> Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12"></div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
-  )
+  );
 }
